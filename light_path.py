@@ -48,7 +48,8 @@ while (getObstacle('center') < 6300 ): #check fluke IR, stop if wave in front
         print("R ", R)
     l = L; c = C; r = R
     wait(1) #pause 1 second between checks
-
+beep(.3, 800)
+wait(2)
 drive(path)
 beep(.3,600)
 beep(.3,700)
