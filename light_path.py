@@ -2,7 +2,7 @@
 # Connect to Robot #
 ####################
 from Myro import *
-init("com7")
+init("com3")
 
 ################
 # Drive a Path #
@@ -33,22 +33,23 @@ threshold = 5000
 while (getObstacle('center') < 6300 ): #check fluke IR, stop if wave in front
     #Get lights
     L, C, R = getLight()
-    #print("L %d C %d R %d sum %d" %(L, C, R, L + C + R))
-    if l-L > threshold: #left brightened
-        beep(.5,400)
-        path += 'L'
-        print("L ", L)
-    elif c-C > threshold: #center brightened
-        beep(.5,500)
+    print("L %d C %d R %d sum %d" %(L, C, R, L + C + R))
+    if c-C > threshold: #center brightened
+        beep(.5,700)
         path += 'C'
         print("C ", C)
+    elif l-L > threshold: #left brightened
+        beep(.5,600)
+        path += 'L'
+        print("L ", L)
     elif r-R > threshold: #right brightened
         beep(.5,800)
         path += 'R'
         print("R ", R)
     l = L; c = C; r = R
     wait(1) #pause 1 second between checks
-beep(.3, 800)
+
+beep(.3, 500)
 wait(2)
 drive(path)
 beep(.3,600)
