@@ -1,3 +1,8 @@
+# IMPORTANT! For this program, be sure to also download the background image at
+# www.github.com/CSavvy/python/blob/master/shape_gui_background.png
+# and put it in the same folder that you put this program!!
+
+
 # Import Myro library and connect to the robot
 from Myro import *
 init("/dev/tty.Fluke2-0216-Fluke2")
