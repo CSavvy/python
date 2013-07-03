@@ -1,6 +1,6 @@
 from Myro import *
-init("com7") #port might be different
-beep(2, 600) #start signal
+init("com3") #port might be different
+beep(1, 600) #start signal
 
 C3 = 261.63;
 E3 = 329.63;
