@@ -1,5 +1,5 @@
 from Myro import *
-init("/dev/tty.Fluke2-0216-Fluke2")
+init()
 
 # Make a graphics window to show the pictures in
 win = Window('Video Stream', 427, 266)
