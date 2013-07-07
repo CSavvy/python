@@ -18,7 +18,7 @@ def cupid():
     turnBy(-90)
 
 from Myro import *
-init("com7")
+init()
 
 # NOTE: be sure to download the wav file at https://github.com/CSavvy/python/blob/master/shuffle2.wav
 s = makeSound("shuffle2.wav")
