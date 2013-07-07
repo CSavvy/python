@@ -5,7 +5,7 @@
 
 # Import Myro library and connect to the robot
 from Myro import *
-init("/dev/tty.Fluke2-0216-Fluke2")
+init()
 
 # We also need to import the graphics library!
 from Graphics import *
