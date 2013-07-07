@@ -2,7 +2,7 @@
 from Myro import *
 
 # Connect to the robot
-init("/dev/tty.Fluke2-0216-Fluke2")
+init()
 
 # This is the array that will hold all the pictures as Scribbler spins
 gif_images = []
