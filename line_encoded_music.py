@@ -1,5 +1,5 @@
 from Myro import *
-init("/dev/tty.Fluke2-0216-Fluke2")
+init()
 
 # The notes I'll be using to play Mary Had a Little Lamb
 G4 = 783.99
