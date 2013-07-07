@@ -1,5 +1,5 @@
 from Myro import *
-init("com7")
+init()
 
 # Make a graphics window to show the pictures in
 win = Window('Video Stream', 427, 266)
