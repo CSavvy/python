@@ -1,5 +1,5 @@
 from Myro import *
-init("com3")
+init()
 Ambient = getLight("center")
 def normalize(v):
     if v > Ambient:
