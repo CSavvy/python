@@ -1,5 +1,5 @@
 from Myro import *
-init("/dev/tty.scribbler")
+init()
 
 # To stop the Scribbler, wave your hand/something in front of the fluke
 while getObstacle('center') < 6300:
