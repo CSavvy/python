@@ -1,5 +1,5 @@
 from Myro import *
-init("com3") #port might be different
+init() #port might be different
 beep(1, 600) #start signal
 
 C3 = 261.63;
