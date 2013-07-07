@@ -2,7 +2,7 @@
 # Connect to Robot #
 ####################
 from Myro import *
-init("com3")
+init()
 
 ################
 # Drive a Path #
