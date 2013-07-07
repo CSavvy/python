@@ -1,5 +1,5 @@
 from Myro import *
-init("com3")
+init()
 
 setName("Robby")
 print("Now my name is ", getName())
