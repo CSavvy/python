@@ -21,9 +21,9 @@ from Myro import *
 init()
 
 # NOTE: be sure to download the wav file at https://github.com/CSavvy/python/blob/master/shuffle2.wav
-s = makeSound("shuffle2.wav")
+song = makeSound("shuffle2.wav")
 for j in range(1): #set number of loops here
-    c = s.Play(0, 32000)
+    song.Play(0, 32000)
     wait(5)
     cupid()
     wait(.5)
