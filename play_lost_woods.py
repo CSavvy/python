@@ -1,5 +1,5 @@
 from Myro import *
-init() #enter your port number (com port for windows; tty for mac)
+init() #enter your port number
 
 #assign variable names to frequencies for easier programming
 C3 = 261.63
