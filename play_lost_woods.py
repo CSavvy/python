@@ -18,10 +18,13 @@ E5 = 1318.51;
 F5 = 1396.91;
 G5 = 1567.98;
 
-for i in range(2):
- beep(0.16,F4,F3);
- beep(0.16,A4,C4);
- beep(0.32,B4,C4);   
+
+beep(0.16,F4,F3);
+beep(0.16,A4,C4);
+beep(0.32,B4,C4);   
+beep(0.16,F4,F3);
+beep(0.16,A4,C4);
+beep(0.32,B4,C4); 
 
  
 beep(0.16,F4,F3);
@@ -43,10 +46,13 @@ beep(0.16,G4,C4);
 beep(0.64,E4,C4);
 wait(0.32);
 
-for i in range(2):
- beep(0.16,F4,F3);
- beep(0.16,A4,C4);
- beep(0.32,B4,C4);   
+
+beep(0.16,F4,F3);
+beep(0.16,A4,C4); 
+beep(0.32,B4,C4);   
+beep(0.16,F4,F3);
+beep(0.16,A4,C4);
+beep(0.32,B4,C4);
 
  
 beep(0.16,F4,F3);
@@ -120,4 +126,4 @@ beep(0.08,C5,F5);
 wait(0.08);
 beep(0.08,A4,D5);
 beep(1.28,B4,E5);
-wait(1.28);
+
