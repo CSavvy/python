@@ -1,4 +1,3 @@
-
 from Myro import *
 
 # Connect to the robot
