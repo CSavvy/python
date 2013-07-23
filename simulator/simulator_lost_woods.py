@@ -1,5 +1,5 @@
 from Myro import *
-init("sim") #port might be different
+init("sim")
 
 C3 = 261.63;
 E3 = 329.63;
