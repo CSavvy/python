@@ -20,7 +20,7 @@ def cupid():
 from Myro import *
 init()
 
-# NOTE: be sure to download the wav file at https://github.com/CSavvy/python/blob/master/shuffle2.wav
+# NOTE: be sure to download the wav file at https://github.com/CSavvy/python/blob/master/shuffle2.wav?raw=true
 song = makeSound("shuffle2.wav")
 for j in range(1): #set number of loops here
     song.Play(0, 32000)
