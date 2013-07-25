@@ -21,7 +21,7 @@ from Myro import *
 init("sim")
 penDown()
 
-# NOTE: be sure to download the wav file at https://github.com/CSavvy/python/blob/master/shuffle2.wav
+# NOTE: be sure to download the wav file at https://github.com/CSavvy/python/blob/master/shuffle2.wav?raw=true
 s = makeSound("shuffle2.wav")
 for j in range(2): #set number of loops here
     c = s.Play(0, 31500)
