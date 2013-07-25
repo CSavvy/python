@@ -1,5 +1,5 @@
 # IMPORTANT! For this program, be sure to also download the background image at
-# www.github.com/CSavvy/python/blob/master/shape_gui_background.png
+# https://raw.github.com/CSavvy/python/master/shape_gui_background.png
 # and put it in the same folder that you put this program!!
 
 
