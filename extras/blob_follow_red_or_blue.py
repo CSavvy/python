@@ -1,16 +1,17 @@
 '''
 To adjust the color settings, it is best to uncomment
 one print line to see which yuv values to bound for that
-specific color.
+specific color and uncomment the "continue" line to stop movement
+so that you can focus on picking the color of interest.
 '''
 from Myro import *
-init("com3")
+init()
 
 setPictureSize("small")
 autoCamera()
 
 
-'''
+
 #chase blue setting
 ylow = 0
 yhigh = 255
@@ -32,7 +33,7 @@ vhigh = 183
 xsum = 0
 ysum = 0
 num = 0
-
+'''
 
 
 c = 0
@@ -73,8 +74,8 @@ while True:
     print("The average pixel x position of the color of interest: ", xavg)
     yavg = ysum / num
     #print(yavg)
-    continue
-    if num > 1500: #there are enough pixels of the color of interest
+    #continue #uncomment this line to prevent motion
+    if num > 1000: #there are enough pixels of the color of interest
         if xavg < 150:#the object is to the left
             turnBy(10)
         elif xavg > 300:#the object is to the right
