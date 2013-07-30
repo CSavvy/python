@@ -7,7 +7,8 @@ A4 = 880
 B4 = 987.77
 
 # Drive slowly across the page with music lines
-motors(-.05,-.05)
+backward(.1)
+
 # To stop the Scribbler, wave your hand/something in front of the fluke
 while getObstacle('center') < 6300:
     left, right = getLine()
