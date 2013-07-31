@@ -12,12 +12,12 @@ Done, but pick motors() or forward and rotate
 
 simulator_360_gif.py
 ```
-The simulator spins in a circle and takes pictures, combining them into a gif file.
+The Simulator Scribbler spins in a circle and takes pictures, combining them into a gif file.
 ```
 
 simulator_cupid_shuffle.py
 ```
-The Simulator does the Cupid Shuffle.
+The Simulator Scribbler does the Cupid Shuffle.
 ```
 
 simulator_draw_shapes.py
@@ -33,7 +33,7 @@ The Simulator beeps Lost Woods from Zelda.
 
 snowcone.py
 ```
-Scribbler draws a snowcone.
+The Simulator Scribbler draws a snowcone.
 ```
 
 simulator_spybot.py
