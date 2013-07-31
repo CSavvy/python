@@ -1,6 +1,6 @@
 Scribbler + Python + Calico
 ===========================
-These are some sample programs written in Python to help get started programming with the
+These are some sample programs written in Python to help you get started programming with the
 Scribbler 2 robot and Fluke2 add-on. It goes with the free online course at csavvyedu.appspot.com
 
 
@@ -31,7 +31,8 @@ Scribbler draws a diamond.
 
 draw_shapes.py
 ```
-Choose to draw a square, triangle, circle, and/or heart with Scribbler through a graphical user interface.
+Choose to draw a square, triangle, circle, and/or heart with Scribbler through a 
+graphical user interface.
 ```
 
 light_alive.py
@@ -41,7 +42,8 @@ Scribbler uses his/her light sensors to follow a light source.
 
 light_path.py
 ```
-Use a flashlight to tell Scribbler a series of movements to drive. It's programming without programming! :)
+Use a flashlight to tell Scribbler a series of movements to drive. It's programming 
+without programming! :)
 ```
 
 line_follow.py
@@ -61,5 +63,6 @@ Scribbler draws a snowcone.
 
 video_stream_senses.py
 ```
-Similar to SpyBot, use Scribbler to make a video stream, but this time edit the stream's colors when Scribbler gets close to something.
+Similar to SpyBot, use Scribbler to make a video stream, but this time edit the stream's 
+colors when Scribbler gets close to something.
 ```
