@@ -11,7 +11,7 @@ setPictureSize("small")
 autoCamera()
 
 
-
+'''
 #chase blue setting
 ylow = 0
 yhigh = 255
@@ -33,7 +33,7 @@ vhigh = 183
 xsum = 0
 ysum = 0
 num = 0
-'''
+
 
 
 c = 0
