@@ -1,0 +1,14 @@
+from Myro import *
+init("sim")
+penDown()
+sides = 3
+spd = 5
+backward(spd, 3/spd)
+
+for y in range(4):
+    forward(spd, 1/spd)
+    for x in range(3):
+        forward(spd, 1/spd)
+        turnBy(120)
+forward(spd, 2/spd)
+
