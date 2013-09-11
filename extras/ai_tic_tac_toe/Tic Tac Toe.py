@@ -8,14 +8,13 @@ import random
 from games import *
 
 # Make the board window
-win = Window("Tic Tac Toe!!!!", 600, 600)
+win = Window("Tic Tac Toe!", 600, 600)
 win.setBackground(Color('white'))
 
+# This function prints out the board that it was passed.
+# "board" is a list of 10 strings representing the board (ignore index 0)
+# The X and O strings designate where to put the X and O images on the Window
 def drawBoard(board):
-    # This function prints out the board that it was passed.
-
-    # "board" is a list of 10 strings representing the board (ignore index 0)
-    # The X and O strings designate where to put the X and O images on the Window
     for i in range(3):
         for j in range(3):
             t = board[1 + i + 3*j]
@@ -28,6 +27,7 @@ def drawBoard(board):
                 pic.moveTo(100 + 200*i, 500 - 200*j)
                 pic.draw(win)
 
+# Convert a move's coordinates to a tile number
 def to_num(move):
     (x,y) = move
     if (x, y) == (1,1):
@@ -49,6 +49,7 @@ def to_num(move):
     if (x, y) == (3,3):
         return 3
 
+# Convert a move's tile number to coordinates
 def to_xy(move):
     if move == 1:
         return (3, 1)
@@ -69,27 +70,27 @@ def to_xy(move):
     if move == 9:
         return (1, 3)
 
+# This function returns True if the player wants to play again, otherwise it returns False.
 def playAgain():
-    # This function returns True if the player wants to play again, otherwise it returns False.
-    #print('Do you want to play again? (yes or no)')
-    #return input('Do you want to play again? (yes or no)').lower().startswith('y')
+    # Clear the graphics window to draw a screen that asks them a question
     win.clear()
     if isWinner(theBoard, playerLetter):
-        speak('Congratulations. You have won.')
+        #speak('Congratulations. You have won.')
         win.setBackground(Color('Green'))
-        t = Text((300, 50), "YOU WIN!!! :)")
+        t = Text((300, 50), "YOU WIN! :)")
         t.draw(win)
     elif isWinner(theBoard, computerLetter):
-        speak('You have lost.')
+        #speak('You have lost.')
         win.setBackground(Color('Red'))
-        t = Text((300, 50), "YOU LOSE!!! :(")
+        t = Text((300, 50), "YOU LOSE! :(")
         t.draw(win)
     else:
-        speak('It\'s a tie game.')
+        #speak('It\'s a tie game.')
         win.setBackground(Color('Yellow'))
-        t = Text((300, 50), "you tie!!! 0_o")
+        t = Text((300, 50), "you tie! 0_o")
         t.draw(win)
 
+    # Draw some lines to make a border around the clickable regions. Clicks are handled below
     l = Line((300, 100), (300, 600))
     l.setWidth(10)
     l.draw(win)
@@ -101,25 +102,26 @@ def playAgain():
     t = Text((450, 300), 'Quit')
     t.draw(win)
 
-    speak('Do you want to play again, or quit?')
+    #speak('Do you want to play again, or quit?')
 
+    # Wait for them to click somewhere. Check the x coordinate of their click (y is ignored) to see if they said yes or no
     x, y = getMouse()
-    win.setBackground(Color('Gray'))
     if x < 300:
-        return True
+        return True #Play again
     else:
         win.clear()
-        speak('Please close this window')
+        #speak('Please close this window')
         t = Text((300, 300), "Please close this window...")
         t.draw(win)
         return False
 
+# Write a move to the board
 def makeMove(board, letter, move):
     board[move] = letter
 
+# Given a board and a player's letter, this function returns True if that player has won.
+# We use bo instead of board and le instead of letter so we don't have to type as much.
 def isWinner(bo, le):
-    # Given a board and a player's letter, this function returns True if that player has won.
-    # We use bo instead of board and le instead of letter so we don't have to type as much.
     return ((bo[7] == le and bo[8] == le and bo[9] == le) or # across the top
     (bo[4] == le and bo[5] == le and bo[6] == le) or # across the middle
     (bo[1] == le and bo[2] == le and bo[3] == le) or # across the bottom
@@ -129,8 +131,8 @@ def isWinner(bo, le):
     (bo[7] == le and bo[5] == le and bo[3] == le) or # diagonal
     (bo[9] == le and bo[5] == le and bo[1] == le)) # diagonal
 
+# Make a duplicate of the board list and return it the duplicate.
 def getBoardCopy(board):
-    # Make a duplicate of the board list and return it the duplicate.
     dupeBoard = []
 
     for i in board:
@@ -138,16 +140,15 @@ def getBoardCopy(board):
 
     return dupeBoard
 
+# Return true if the passed move is free on the passed board.
 def isSpaceFree(board, move):
-    # Return true if the passed move is free on the passed board.
     return board[move] == ' '
 
+# Let the player type in his/her move by clicking on the board
 def getPlayerMove(board):
-    # Let the player type in his move.
     move = ' '
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
-        #print('What is your next move? (1-9)')
-        #move = input('What is your next move? (1-9)')
+        #print('What is your next move? (Please click on the desired square)')
         x, y = getMouse()
         x = x//200
         y = 2 - y//200
@@ -155,9 +156,9 @@ def getPlayerMove(board):
 
     return int(move)
 
+# Returns a valid move from the passed list on the passed board.
+# Returns None if there is no valid move.
 def chooseRandomMoveFromList(board, movesList):
-    # Returns a valid move from the passed list on the passed board.
-    # Returns None if there is no valid move.
     possibleMoves = []
     for i in movesList:
         if isSpaceFree(board, i):
@@ -168,8 +169,10 @@ def chooseRandomMoveFromList(board, movesList):
     else:
         return None
 
+# Given a board and the computer's letter, determine where to move and return that move.
+# NOTE: WE DO NOT USE THIS FUNCTION / "preprogrammed" AI, we use minimax from AIMA instead.
+# We left it here in case you want to compare or play with it.
 def getComputerMove(board, computerLetter):
-    # Given a board and the computer's letter, determine where to move and return that move.
     if computerLetter == 'X':
         playerLetter = 'O'
     else:
@@ -204,8 +207,8 @@ def getComputerMove(board, computerLetter):
     # Move on one of the sides.
     return chooseRandomMoveFromList(board, [2, 4, 6, 8])
 
+# Return True if every space on the board has been taken. Otherwise return False.
 def isBoardFull(board):
-    # Return True if every space on the board has been taken. Otherwise return False.
     for i in range(1, 10):
         if isSpaceFree(board, i):
             return False
@@ -214,7 +217,7 @@ def isBoardFull(board):
 
 # The loop that runs the game
 while True:
-    # Reset the board
+    # Reset the board, draw the gridlines
     win.clear()
     l = Line((200, 0), (200, 600))
     l.setWidth(10)
@@ -229,28 +232,38 @@ while True:
     l.setWidth(10)
     l.draw(win)
 
+    # Define the game for AIMA TicTacToe
     tgame = TicTacToe()
     state = tgame.initial
+
+    # Initialize the board to be blank
     theBoard = [' '] * 10
+
+    # You could ask, but we'll just have the player always be 'X' and always go first. You can't beat the computer anyway :p
     playerLetter, computerLetter = 'X', 'O'
     turn = 'player'
-    print('The player, X, always goes first')
+    print(' ')
+    print('You\'ve started a new game. The player, X, always goes first')
     gameIsPlaying = True
 
-    # Make this true if you want a chance to win...
+    # Make this true if you don't want to wait for long calculations on the first turn...
+    # If this is true the computer actually makes mistakes... needs to be fixed?
     random_first_move = False
 
     while gameIsPlaying:
         if turn == 'player':
-            # Player's turn.
+            # Player's turn. Update the board
             drawBoard(theBoard)
 
+            # Get the player's move
             move = getPlayerMove(theBoard)
             makeMove(theBoard, playerLetter, move)
             drawBoard(theBoard)
 
+            # Update game state. AIMA.
             state = tgame.make_move(to_xy(move),state)
 
+            # Check if they won or tied, otherwise move to next turn
             if isWinner(theBoard, playerLetter):
                 drawBoard(theBoard)
                 #print('Hooray! You have won the game!')
@@ -259,27 +272,37 @@ while True:
                 if isBoardFull(theBoard):
                     drawBoard(theBoard)
                     #print('The game is a tie!')
-                    break
+                    gameIsPlaying = False
                 else:
                     turn = 'computer'
 
         else:
             # Computer's turn.
+
+            # This is to make it possible to win if you're feeling depressed because the AI is too good..
+            # It makes the computer to move randomly on its first turn. It actually needs to be fixed, because
+            # the computer makes mistakes if this is used..
             if random_first_move:
                 move = chooseRandomMoveFromList(theBoard, [1, 2, 3, 4, 5, 6, 7, 8, 9])
                 while not isSpaceFree(theBoard, move):
                     move = chooseRandomMoveFromList(theBoard, [1, 2, 3, 4, 5, 6, 7, 8, 9])
-                first = False
+                #print(state)
                 move = to_xy(move)
+                random_first_move = False
+                print('Moved Randomly...')
 
+            # It uses a minimax decision to make its move! To use alphabeta instead, switch which line is commented out. Uses AIMA
             else:
+                #move = alphabeta_full_search(state,tgame)
                 move = minimax_decision(state,tgame)
-                
+
+            makeMove(theBoard, computerLetter, to_num(move))
             drawBoard(theBoard)
 
+            # Update game state. AIMA
             state = tgame.make_move(move,state)
-            makeMove(theBoard, computerLetter, to_num(move))
 
+            # Check if they won
             if isWinner(theBoard, computerLetter):
                 drawBoard(theBoard)
                 #print('The computer has beaten you! You lose.')
@@ -288,14 +311,15 @@ while True:
                 if isBoardFull(theBoard):
                     drawBoard(theBoard)
                     #print('The game is a tie!')
-                    break
+                    gameIsPlaying = False
                 else:
                     turn = 'player'
 
+    # If it's game over, let them see the board and wait to ask to play again until they click somewhere
     t = Text((300, 10), "GAME OVER. CLICK TO CONTINUE")
-    speak('Game over')
     t.draw(win)
-    dummy, variable_that_doesnt_matter = getMouse() # Wait for click
+    # Wait for click, where doesn't matter
+    dummy, variable_that_doesnt_matter = getMouse()
     
     # Ask if they want to play again or quit
     if not playAgain():
