@@ -66,3 +66,5 @@ video_stream_senses.py
 Similar to SpyBot, use Scribbler to make a video stream, but this time edit the stream's 
 colors when Scribbler gets close to something.
 ```
+
+License: MIT
