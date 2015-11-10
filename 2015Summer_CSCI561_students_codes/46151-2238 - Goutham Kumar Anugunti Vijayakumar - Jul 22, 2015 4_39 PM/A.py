@@ -1,0 +1,10 @@
+from Myro import *
+init("com14")
+forward(1, 1)
+turnBy(120)
+forward(1, 1)
+turnBy(180)
+forward(1, 0.5)
+turnBy(300)
+forward(1, 0.6)
+turnBy(90)

@@ -1,0 +1,8 @@
+The Scribbler robot is a really interesting unit. It has a number of input sensors and output methods to interact with the environment. Even for simply programming with python, Scribbler can sense the light and move towards the light source as responses, which is really amazing!
+
+However, I did realize some frustration with the robot, which I guess may infer some general AI application problem.
+
+The environment is really unpredictable for the agent. Such as the flatness and the materials of the surface. They all strongly affect the performance of the agent, but really hard to implement into the system. Maybe certain approximation algorithm is required for every AI application to work properly.
+
+
+ 

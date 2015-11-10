@@ -1,0 +1,14 @@
+========================
+FeedBack of PLUTO Design
+------------------------
+            
+The design of the Scribller program is not a difficult job. It takes me within 2 hours to learn the code
+and draw the Pluto heard and five letters on a paper. To split the letters, I use the Beep() function to
+make two sounds so that people can identify when to lift the pen and when to drop. Things work as expected
+in Grove. I invite kids to participate in the drawing, they listen to the sound and drop the pen at proper
+time. Kids are happy to participate, except some shy kids who do not want to hold the pen by them self and
+those who are too young to participate. 
+I find that all of us have devoted much time and design the good drawing. However, the difference between 
+paper and T-shirt makes the robot's behavior unstable. My robot moves in a slow speed, so it does not slip
+on T-shirt too much. I think in the future, students could be provided some guides prameters such that the 
+maximum speed of robot which guarantee the wheel does not slip on T-shirts. 

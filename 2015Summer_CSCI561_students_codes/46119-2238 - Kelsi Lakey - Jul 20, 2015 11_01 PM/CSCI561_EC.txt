@@ -1,0 +1,56 @@
+Kelsi Lakey
+7/20/15
+Scribbler Extra Credit 
+
+I thought that working with the scribbler robot and demonstrating it to the kids was a lot
+of fun, and a great experience. Getting the robot connected at first was a little 
+frustrating, but after that it was fun to learn about everything the robot
+could do. I had fun designing my drawing and decorating my robot, and was a lot more 
+motivated to do so because I wanted the kids to like it. 
+
+I enjoyed interacting with the kids and telling them about how the robot moved, and how it
+knew where to go. It is exciting to see kids playing and learning about robots at such a 
+young age, and I am sure that it will help show them that math and science are important. 
+One of the guys in my group created a button on his laptop for the kids to press to make 
+the robot draw different shapes. I thought this was a great idea, and the kids really 
+liked feeling as though they were making the robot move. 
+
+Something that surprised me was how people often assume that if a robot is doing something 
+it will be done the same way every time. However in the case of our robot and the 
+dependence on the charge of the batteries, the shapes changed over time. Some of the 
+parents were confused when we told them it might not turn out perfect, but it was fun to 
+explain why.
+
+Overall, it was very nice to get to work with an actual robot, and to get out of the 
+classroom and interact with people.
+
+"robot flower"
+from Myro import *
+init("/dev/tty.Fluke2-01E8-Fluke2")
+forward(.6,.5)
+turnRight(1,1)
+forward(.6,.5)
+turnLeft(1,0.5)
+forward(.6,.5)
+turnRight(1,1)
+forward(.6,.5)
+turnLeft(1,0.5)
+forward(.6,.5)
+turnRight(1,1)
+forward(.6,.5)
+turnLeft(1,0.5)
+forward(.6,.5)
+turnRight(1,1)
+forward(.6,.5)
+turnLeft(1,0.5)
+forward(.6,.5)
+turnRight(1,1)
+forward(.6,.5)
+turnLeft(1,0.5)
+forward(.6,.5)
+turnRight(1,1)
+forward(.6,.5)
+
+From one of the points, with a green pen, type in the shell:
+forward(1,1.5)
+turnLeft(1,.7)

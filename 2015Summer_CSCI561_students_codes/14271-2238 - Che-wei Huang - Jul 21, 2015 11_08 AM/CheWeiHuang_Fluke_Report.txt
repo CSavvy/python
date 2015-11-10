@@ -1,0 +1,27 @@
+Che-Wei Huang 2959468535
+
+Python code for a cone:
+from Myro import *
+init(/dev/tty.Fluke2-01D3-Fluke2)
+turnLeft(1,.3)
+forward(1,1)
+motors(1, -0.2, 8.4)
+forward(1,1)
+
+feedback:
+I had a trouble getting my Mac connected to the robot I got, 
+or even my teammate's robot, while my teammate's laptop (non-Mac)
+could easily getting connected to my robot.
+The TA in the field told me I should upgrade my iOS to get it work...
+Sadly, I had no time or enough internet bandwidth to do so.
+Instead, my teammate and I took turns to use his laptop and things worked out.
+
+I drew an ice cone for the kids, which I learned the night before
+the event online. So I basically just pluged in the code and let
+the robot draw on the white cloth. It was fun to see kids saying 
+"wow it's amazing!" or so. 
+Some of the parents even asked us if we are art major...
+I really appreciate the chance to participate in the event.
+
+In the afternoon, I enjoy the farmer's market and the shops there,
+and fortunately came back in time to attend the class.
