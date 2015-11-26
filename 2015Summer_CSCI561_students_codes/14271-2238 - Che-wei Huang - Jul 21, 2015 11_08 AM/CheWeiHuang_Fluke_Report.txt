@@ -1,4 +1,3 @@
-Che-Wei Huang 2959468535
 
 Python code for a cone:
 from Myro import *
